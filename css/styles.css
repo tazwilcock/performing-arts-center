@@ -353,7 +353,6 @@ main > div > div h3 {
   padding: 0;
 }
 main > div > div img {
-  display: block;
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -404,7 +403,7 @@ main > div > div p {
 
 .parent4 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr;
   gap: 32px 12px;
   margin: 0 8px;
 }
@@ -488,6 +487,9 @@ footer p {
     border: none;
     padding: 2.2vw;
   }
+  .parent4 {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media only screen and (min-width: 60rem) {
   header,
@@ -503,5 +505,8 @@ footer p {
   }
   footer {
     margin-top: 3rem;
+  }
+  .parent4 {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }

@@ -32,7 +32,6 @@ h2 {
 }
 
 main > div > div {
-    
     text-align: center;
     h3 {
         font-size: 1.2rem;
@@ -40,7 +39,6 @@ main > div > div {
         padding: 0; 
     }
     img {
-        display: block;
         width: 100%;
         height: auto;
         border-radius: 10px;
@@ -112,7 +110,8 @@ main > div > div {
 
   // our last option stretches until it can fit another column, then shrinks a bit, and grows again
   // GTC repeat(auto-fit, minmax(200px, 1fr)) instead of hardcoding a max we have a 1fr
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr;
   gap: 32px 12px;
   margin: 0 8px;
 }
