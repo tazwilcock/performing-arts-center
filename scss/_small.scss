@@ -1,0 +1,201 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  height: 100%;
+}
+
+/*---- apply a natural box layout model to all elements -------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: $defaultFont;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+h1 {
+  margin: 15px 2vw;
+  text-align: center;
+}
+
+h2 {
+  margin: 75px 2vw 20px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+main > div > div {
+    
+    text-align: center;
+    h3 {
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 0; 
+    }
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    p {
+      margin: .8rem 0 .2rem;
+      padding: 0;
+      font-weight: $normalWeight;
+    }
+}
+
+// Flex Box Examples
+
+// Flex Box Card Layout 1
+.parent1 {
+    margin: 0 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+// Flex Box Card Layout 2
+.parent2 {
+    margin: 0 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px 20px;
+    div {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 200px;
+    }
+}
+
+// Flex Box Card Layout 3
+.parent3 {
+    margin: 0 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 8px;
+    column-gap: 8px;
+    div {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 200px;
+    }
+}
+
+// Grid Examples
+.parent4 {
+  display: grid;
+  // GTC 1fr 1fr just gives us 2 columns
+  //grid-template-columns: 1fr 1fr;
+
+  // GTC repeat(3, 1fr) is another way of saying 1fr 1fr 1f and this gives us 3 even columns
+  // grid-template-columns: repeat(3, 1fr);
+  
+  // GTC repeat(3, minmax(100px, 200px)) 100px is min size of each div, max is 200px
+  // grid-template-columns: repeat(3, minmax(100px, 300px));
+
+  // GTC reapeat(auto-fit... gives you a min and max but leaves a gap until another column can fit
+  // grid-template-columns: repeat(auto-fit, minmax(200px, 260px));
+
+  // our last option stretches until it can fit another column, then shrinks a bit, and grows again
+  // GTC repeat(auto-fit, minmax(200px, 1fr)) instead of hardcoding a max we have a 1fr
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px 12px;
+  margin: 0 8px;
+}
+
+
+/* HEADER  */
+// header {
+//     display: grid;
+//     grid-template-columns: 51px auto;
+//     align-items: center;
+// 	padding: .5rem 2vw;
+// 	h1 {
+//         font-size: 1.6rem;
+//         font-weight: $lightWeight;
+//         padding-left: .5rem;
+//         color: $primaryColor;
+//     }
+// } end header
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem $gutter;
+  gap: 8px;
+  h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: $normalWeight;
+  }
+}
+
+#headerWrapper {
+  background-color: $headerColor;
+  color: white;
+}
+
+// Nav Styling
+
+#navWrapper {
+  background-color: $navColor;
+}
+
+nav {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 3rem;
+    li {
+      flex: 1;
+    }
+  }
+  li.active {
+    background-color: $navItemActiveHover;
+    color: black;
+  }
+  a {
+    display: block;
+    padding: .9rem;
+    color: white;
+    font-weight: $boldWeight;
+    text-decoration: none;
+    border-top: solid 0.5px white;
+    &:hover {
+      background-color: $navItemActiveHover;
+      font-weight: $boldWeight;
+    }
+  }
+}
+
+// Footer Styling
+
+#footerWrapper {
+  background-color: $headerColor;
+}
+
+footer {
+  padding: 0.5rem $gutter;
+  margin-top: 3rem;
+  color: white;
+  p {
+    margin: 0;
+    padding: 6px;
+    font-weight: $lightWeight;
+    text-align: center;
+  }
+}

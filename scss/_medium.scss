@@ -1,0 +1,18 @@
+header {
+  padding: 2rem $gutter;
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+// Nav Styles
+
+nav {
+  ul {
+    display: flex;
+    li a {
+      border: none;
+      padding: 2.2vw;
+    }
+  }
+}
