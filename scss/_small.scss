@@ -156,6 +156,7 @@ header {
 }
 
 nav {
+  max-width: 75rem;
   ul {
     list-style-type: none;
     padding: 0;
@@ -166,7 +167,6 @@ nav {
   }
   li.active {
     background-color: $navItemActiveHover;
-    color: black;
   }
   a {
     display: block;
@@ -176,7 +176,7 @@ nav {
     text-decoration: none;
     border-top: solid 0.5px white;
     &:hover {
-      background-color: $navItemActiveHover;
+      color: black;
       font-weight: $boldWeight;
     }
   }

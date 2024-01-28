@@ -431,6 +431,9 @@ header h1 {
   background-color: #4B76B6;
 }
 
+nav {
+  max-width: 75rem;
+}
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -441,7 +444,6 @@ nav ul li {
 }
 nav li.active {
   background-color: #BA3B46;
-  color: black;
 }
 nav a {
   display: block;
@@ -452,7 +454,7 @@ nav a {
   border-top: solid 0.5px white;
 }
 nav a:hover {
-  background-color: #BA3B46;
+  color: black;
   font-weight: 700;
 }
 
