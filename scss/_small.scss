@@ -133,19 +133,39 @@ main > div > div {
 
 header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem $gutter;
+  padding: 1rem;
   gap: 8px;
   h1 {
     margin: 0;
-    font-size: 1.2rem;
     font-weight: $normalWeight;
+  }
+  img {
+    width: 1.6rem;
+  }
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  h1 {
+    font-size: 1.5rem;
+  }
+  img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+  }
+  p {
+    font-size: 20px;
+    font-weight: $normalWeight;
+    display: none;
   }
 }
 
 #headerWrapper {
-  background-color: $headerColor;
-  color: white;
+  color: black;
 }
 
 // Nav Styling

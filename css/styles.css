@@ -411,19 +411,39 @@ main > div > div p {
 /* HEADER  */
 header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem 16px;
+  padding: 1rem;
   gap: 8px;
 }
 header h1 {
   margin: 0;
-  font-size: 1.2rem;
   font-weight: 400;
+}
+header img {
+  width: 1.6rem;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+}
+header > div h1 {
+  font-size: 1.5rem;
+}
+header > div img {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+}
+header > div p {
+  font-size: 20px;
+  font-weight: 400;
+  display: none;
 }
 
 #headerWrapper {
-  background-color: #262322;
-  color: white;
+  color: black;
 }
 
 #navWrapper {
@@ -475,10 +495,23 @@ footer p {
 
 @media only screen and (min-width: 35rem) {
   header {
-    padding: 2rem 16px;
+    padding: 1rem 16px;
   }
-  header h1 {
-    font-size: 2rem;
+  header .phone {
+    display: none;
+  }
+  header > div h1 {
+    font-size: 1.8rem;
+  }
+  header > div img {
+    width: 50px;
+  }
+  header > div p {
+    display: block;
+    color: black;
+  }
+  header > div a {
+    text-decoration: none;
   }
   nav ul {
     display: flex;

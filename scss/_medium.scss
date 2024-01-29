@@ -1,7 +1,23 @@
 header {
-  padding: 2rem $gutter;
+  padding: 1rem $gutter;
+  .phone {
+    display: none;
+  }
+}
+
+header > div {
   h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  img {
+    width: 50px;
+  }
+  p {
+    display: block;
+    color: black;
+  }
+  a {
+    text-decoration: none;
   }
 }
 
